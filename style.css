@@ -1,0 +1,120 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background: #181a20; 
+    color: #f3f3f3; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.container { 
+    max-width: 700px; 
+    margin: 40px auto; 
+    background: #23262f; 
+    border-radius: 10px; 
+    padding: 32px 24px; 
+    box-shadow: 0 4px 24px #0008; 
+}
+
+h1 { 
+    text-align: center; 
+    margin-bottom: 24px; 
+}
+
+label { 
+    display: block; 
+    margin-top: 18px; 
+    font-weight: bold; 
+}
+
+input[type="text"], textarea, select { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 6px; 
+    border-radius: 5px; 
+    border: none; 
+    background: #2c2f38; 
+    color: #f3f3f3; 
+    font-size: 1rem; 
+    box-sizing: border-box;
+}
+
+textarea { 
+    min-height: 160px; 
+    resize: vertical; 
+}
+
+select {
+    cursor: pointer;
+}
+
+select option {
+    background: #2c2f38;
+    color: #f3f3f3;
+}
+
+.regex-controls {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+}
+
+.regex-input-group {
+    flex: 1;
+}
+
+.flags-input-group {
+    flex: 0 0 120px;
+}
+
+.suggestions-group {
+    flex: 0 0 200px;
+}
+
+.result { 
+    margin-top: 24px; 
+    background: #1a1c22; 
+    padding: 18px; 
+    border-radius: 6px; 
+    min-height: 60px; 
+    font-family: 'Fira Mono', monospace; 
+    white-space: pre-wrap; 
+    word-break: break-word; 
+}
+
+.highlight { 
+    background: #ffeb3b; 
+    color: #23262f; 
+    border-radius: 3px; 
+    padding: 0 2px; 
+}
+
+.error { 
+    color: #ff5252; 
+    margin-top: 8px; 
+}
+
+.match-info {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #a0a3a8;
+}
+
+.tooltip-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #666;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: help;
+    margin-left: 6px;
+    font-weight: normal;
+    transition: background-color 0.2s ease;
+}
+
+.tooltip-icon:hover {
+    background: #4caf50;
+}

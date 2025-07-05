@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Sandbox</h1>
+        
+        <div class="regex-controls">
+            <div class="regex-input-group">
+                <label for="regex-input">
+                    Regex Pattern 
+                    <span class="tooltip-icon" title="A regex pattern defines what text to match. Use special characters like \d (digits), \w (word characters), . (any character), + (one or more), * (zero or more), ? (optional), [] (character sets), () (groups), and | (or).">?</span>
+                </label>
+                <input type="text" id="regex-input" placeholder="e.g. (\w+)" autocomplete="off">
+            </div>
+            <div class="flags-input-group">
+                <label for="flags-input">
+                    Flags 
+                    <span class="tooltip-icon" title="Flags modify how the regex works: 'g' = global (find all matches), 'i' = case-insensitive, 'm' = multiline mode, 's' = dotall mode. Combine flags like 'gi' for global + case-insensitive.">?</span>
+                </label>
+                <input type="text" id="flags-input" placeholder="e.g. g, i, m" autocomplete="off">
+            </div>
+            <div class="suggestions-group">
+                <label for="pattern-suggestions">Common Patterns</label>
+                <select id="pattern-suggestions">
+                    <option value="">Choose a pattern...</option>
+                    <option value="\b\w+\b">Words (\b\w+\b)</option>
+                    <option value="\d+">Numbers (\d+)</option>
+                    <option value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}">Email</option>
+                    <option value="\b\d{3}-\d{3}-\d{4}\b">Phone (XXX-XXX-XXXX)</option>
+                    <option value="https?://[^\s]+">URLs</option>
+                    <option value="(\w+)\s+(\w+)">Word pairs</option>
+                    <option value="[A-Z][a-z]+">Capitalized words</option>
+                    <option value="\b[A-Z]{2,}\b">Acronyms</option>
+                    <option value="\$\d+\.?\d*">Currency ($)</option>
+                    <option value="\b\d{1,2}/\d{1,2}/\d{4}\b">Dates (MM/DD/YYYY)</option>
+                    <option value="#[a-fA-F0-9]{6}">Hex colors</option>
+                    <option value="^\s*$">Empty lines</option>
+                </select>
+            </div>
+        </div>
+        
+        <label for="text-input">Sample Text</label>
+        <textarea id="text-input">The quick brown fox jumps over the lazy dog. 123-456-7890. Email: test@example.com
+Visit our website: https://example.com or call us at 555-123-4567.
+Colors: #ff5252, #ffeb3b, #4caf50
+Date: 12/25/2023
+Price: $29.99
+NASA, FBI, CIA are common acronyms.</textarea>
+        
+        <div class="error" id="error-msg"></div>
+        <div class="match-info" id="match-info"></div>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
