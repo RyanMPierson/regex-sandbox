@@ -2,6 +2,8 @@
 
 A real-time regex testing tool that allows you to experiment with regular expressions and see live highlighting of matches in sample text.
 
+![regex-sandbox](https://github.com/user-attachments/assets/2dab5b3e-6f7b-45f4-833d-028849a3a659)
+
 ## Features
 
 - **Real-time pattern matching** - See matches highlighted instantly as you type
