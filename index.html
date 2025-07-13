@@ -56,6 +56,101 @@ NASA, FBI, CIA are common acronyms.</textarea>
         <div class="error" id="error-msg"></div>
         <div class="match-info" id="match-info"></div>
         <div class="result" id="result"></div>
+        
+        <div class="syntax-reference">
+            <h3>Regex Syntax Reference</h3>
+            <table class="syntax-table">
+                <thead>
+                    <tr>
+                        <th>Syntax</th>
+                        <th>Definition</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.</code></td>
+                        <td>Matches any character (except newline)</td>
+                        <td><code>a.c</code> matches "abc", "adc", "a1c"</td>
+                    </tr>
+                    <tr>
+                        <td><code>\d</code></td>
+                        <td>Matches any digit (0-9)</td>
+                        <td><code>\d{3}</code> matches "123", "456"</td>
+                    </tr>
+                    <tr>
+                        <td><code>\w</code></td>
+                        <td>Matches word characters (letters, digits, underscore)</td>
+                        <td><code>\w+</code> matches "hello", "test123"</td>
+                    </tr>
+                    <tr>
+                        <td><code>\s</code></td>
+                        <td>Matches whitespace characters (space, tab, newline)</td>
+                        <td><code>\s+</code> matches spaces between words</td>
+                    </tr>
+                    <tr>
+                        <td><code>+</code></td>
+                        <td>Matches one or more of the preceding character</td>
+                        <td><code>a+</code> matches "a", "aa", "aaa"</td>
+                    </tr>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td>Matches zero or more of the preceding character</td>
+                        <td><code>a*</code> matches "", "a", "aa", "aaa"</td>
+                    </tr>
+                    <tr>
+                        <td><code>?</code></td>
+                        <td>Matches zero or one of the preceding character</td>
+                        <td><code>colou?r</code> matches "color", "colour"</td>
+                    </tr>
+                    <tr>
+                        <td><code>^</code></td>
+                        <td>Matches the beginning of a line</td>
+                        <td><code>^Hello</code> matches "Hello" at line start</td>
+                    </tr>
+                    <tr>
+                        <td><code>$</code></td>
+                        <td>Matches the end of a line</td>
+                        <td><code>end$</code> matches "end" at line end</td>
+                    </tr>
+                    <tr>
+                        <td><code>[]</code></td>
+                        <td>Character class - matches any character inside</td>
+                        <td><code>[aeiou]</code> matches any vowel</td>
+                    </tr>
+                    <tr>
+                        <td><code>()</code></td>
+                        <td>Grouping - captures matched text</td>
+                        <td><code>(\d{3})-(\d{3})-(\d{4})</code> captures phone parts</td>
+                    </tr>
+                    <tr>
+                        <td><code>|</code></td>
+                        <td>Alternation - matches either pattern</td>
+                        <td><code>cat|dog</code> matches "cat" or "dog"</td>
+                    </tr>
+                    <tr>
+                        <td><code>\b</code></td>
+                        <td>Word boundary - matches word edges</td>
+                        <td><code>\bcat\b</code> matches "cat" but not "catch"</td>
+                    </tr>
+                    <tr>
+                        <td><code>{n}</code></td>
+                        <td>Matches exactly n occurrences</td>
+                        <td><code>\d{3}</code> matches exactly 3 digits</td>
+                    </tr>
+                    <tr>
+                        <td><code>{n,m}</code></td>
+                        <td>Matches between n and m occurrences</td>
+                        <td><code>\d{2,4}</code> matches 2-4 digits</td>
+                    </tr>
+                    <tr>
+                        <td><code>[^]</code></td>
+                        <td>Negated character class - matches anything NOT inside</td>
+                        <td><code>[^aeiou]</code> matches consonants</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
